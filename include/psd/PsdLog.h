@@ -5,7 +5,6 @@
 
 #include <cstdio>
 
-
 /// \def PSD_ENABLE_LOGGING 
 /// \ingroup Platform
 /// Enables/disables the use of the \ref PSD_WARNING and \ref PSD_ERROR macros. If disabled, these macros will not generate any instructions.
@@ -13,7 +12,6 @@
 #ifndef PSD_ENABLE_LOGGING
 	#define PSD_ENABLE_LOGGING 1
 #endif
-
 
 /// \def PSD_WARNING
 /// \ingroup Platform

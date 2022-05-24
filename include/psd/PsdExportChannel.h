@@ -3,6 +3,7 @@
 
 #pragma once
 
+#include <psd/PsdPch.h>
 
 PSD_NAMESPACE_BEGIN
 
@@ -11,7 +12,7 @@ PSD_NAMESPACE_BEGIN
 /// \brief A namespace denoting a channel that is exported to the Layer Mask section.
 namespace exportChannel
 {
-	enum Enum
+	enum PSD_API Enum
 	{
 		// supported in Grayscale documents
 		GRAY,

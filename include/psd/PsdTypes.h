@@ -3,9 +3,7 @@
 
 #pragma once
 
-
 #include <psd/Psdstdint.h>
-
 
 /// \ingroup Platform
 /// \brief Defines a standard 32-bit floating-point type.

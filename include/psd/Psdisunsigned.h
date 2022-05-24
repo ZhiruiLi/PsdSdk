@@ -3,8 +3,8 @@
 
 #pragma once
 
+#include <psd/PsdPch.h>
 #include <type_traits>
-
 
 PSD_NAMESPACE_BEGIN
 
@@ -13,7 +13,7 @@ namespace util
 	/// \ingroup Util
 	/// \brief Wrapper around std::is_unsigned, because it is not supported by all compilers.
 	template <typename T>
-	struct IsUnsigned
+	struct PSD_API IsUnsigned
 	{
 #if PSD_USE_MSVC && PSD_USE_MSVC_VER <= 2008
 		static const bool value = std::tr1::is_unsigned<T>::value;

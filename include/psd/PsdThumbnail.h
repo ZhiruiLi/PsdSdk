@@ -3,6 +3,7 @@
 
 #pragma once
 
+#include <psd/PsdPch.h>
 
 PSD_NAMESPACE_BEGIN
 
@@ -10,7 +11,7 @@ PSD_NAMESPACE_BEGIN
 /// \class Thumbnail
 /// \brief A struct representing a thumbnail as stored in the image resources section.
 /// \sa ImageResourcesSection
-struct Thumbnail
+struct PSD_API Thumbnail
 {
 	uint32_t width;
 	uint32_t height;

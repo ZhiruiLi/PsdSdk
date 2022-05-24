@@ -3,15 +3,15 @@
 
 #pragma once
 
+#include <psd/PsdPch.h>
 #include <psd/PsdAllocator.h>
-
 
 PSD_NAMESPACE_BEGIN
 
 /// \ingroup Allocators
 /// \brief Simple allocator implementation that uses malloc and free internally.
 /// \sa Allocator
-class MallocAllocator : public Allocator
+class PSD_API MallocAllocator : public Allocator
 {
 private:
 	virtual void* DoAllocate(size_t size, size_t alignment) PSD_OVERRIDE;

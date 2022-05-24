@@ -3,11 +3,11 @@
 
 #pragma once
 
+#include <psd/PsdPch.h>
 #include <psd/PsdExportColorMode.h>
 #include <psd/PsdExportMetaDataAttribute.h>
 #include <psd/PsdExportLayer.h>
 #include <psd/PsdAlphaChannel.h>
-
 
 PSD_NAMESPACE_BEGIN
 
@@ -16,7 +16,7 @@ struct Thumbnail;
 /// \ingroup Types
 /// \class ExportDocument
 /// \brief A struct representing a document to be exported.
-struct ExportDocument
+struct PSD_API ExportDocument
 {
 	static const unsigned int MAX_ATTRIBUTE_COUNT = 128u;
 	static const unsigned int MAX_LAYER_COUNT = 128u;

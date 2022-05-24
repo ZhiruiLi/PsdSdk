@@ -1,12 +1,13 @@
 #pragma once
 
-#include <psd/PsdNamespace.h>
+#include <psd/PsdPch.h>
 #include <psd/PsdAllocator.h>
 
 PSD_NAMESPACE_BEGIN
 
 namespace stringUtil
 {
+
 	///
 	/// \brief Convert wchar_t * to char *
 	/// 
@@ -14,7 +15,8 @@ namespace stringUtil
 	/// \param alloc The mem allocator
 	/// \return char* nullptr on error
 	///
-	char *ConvertWString(const wchar_t* ws, Allocator* alloc);
+	PSD_API char *ConvertWString(const wchar_t* ws, Allocator* alloc);
+
 }
 
 PSD_NAMESPACE_END

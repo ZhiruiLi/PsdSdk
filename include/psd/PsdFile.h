@@ -3,11 +3,11 @@
 
 #pragma once
 
+#include <psd/PsdPch.h>
 
 PSD_NAMESPACE_BEGIN
 
 class Allocator;
-
 
 /// \ingroup Interfaces
 /// \ingroup Files
@@ -17,7 +17,7 @@ class Allocator;
 /// \remark Note that the interface only offers asynchronous read operations. The reason for this is that asynchronous reads
 /// allow for parallelizing file accesses to the same file, while still being able to add synchronous reads as a wrapper on top.
 /// \sa NativeFile SyncFileReader
-class File
+class PSD_API File
 {
 public:
 	/// A type representing an object associated with a read operation.

@@ -63,7 +63,8 @@
 	#endif
 #endif
 
-#include "PsdCompilerMacros.h"
-#include "PsdTypes.h"
-#include "PsdNamespace.h"
+#include <psd/PsdCompilerMacros.h>
+#include <psd/PsdTypes.h>
+#include <psd/PsdNamespace.h>
+#include <psd/PsdApi.h>
 #include <cstddef>

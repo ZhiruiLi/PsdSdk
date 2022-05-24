@@ -3,13 +3,14 @@
 
 #pragma once
 
+#include <psd/PsdPch.h>
 
 PSD_NAMESPACE_BEGIN
 
 /// \ingroup Sections
 /// \class ColorModeDataSection
 /// \brief A struct representing the information extracted from the Color Mode Data section.
-struct ColorModeDataSection
+struct PSD_API ColorModeDataSection
 {
 };
 

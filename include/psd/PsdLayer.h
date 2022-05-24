@@ -3,8 +3,8 @@
 
 #pragma once
 
+#include <psd/PsdPch.h>
 #include <psd/PsdFixedSizeString.h>
-
 
 PSD_NAMESPACE_BEGIN
 
@@ -13,12 +13,11 @@ struct TransparencyMask;
 struct LayerMask;
 struct VectorMask;
 
-
 /// \ingroup Types
 /// \class Layer
 /// \brief A struct representing a layer as stored in the Layer Mask Info section.
 /// \sa LayerMaskSection Channel LayerMask VectorMask
-struct Layer
+struct PSD_API Layer
 {
 	Layer* parent;						///< The layer's parent layer, if any.
 	util::FixedSizeString name;			///< The ASCII name of the layer. Truncated to 31 characters in PSD files.

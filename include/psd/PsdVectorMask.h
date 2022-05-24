@@ -3,6 +3,7 @@
 
 #pragma once
 
+#include <psd/PsdPch.h>
 
 PSD_NAMESPACE_BEGIN
 
@@ -10,7 +11,7 @@ PSD_NAMESPACE_BEGIN
 /// \class VectorMask
 /// \brief A struct representing a vector mask as stored in the layers of the Layer Mask section.
 /// \sa Layer LayerMask
-struct VectorMask
+struct PSD_API VectorMask
 {
 	int32_t top;					///< Top coordinate of the rectangle that encloses the mask.
 	int32_t left;					///< Left coordinate of the rectangle that encloses the mask.

@@ -3,6 +3,7 @@
 
 #pragma once
 
+#include <psd/PsdPch.h>
 
 PSD_NAMESPACE_BEGIN
 
@@ -13,7 +14,7 @@ PSD_NAMESPACE_BEGIN
 /// using custom allocators for better performance, a smaller memory footprint, and for adding extra debugging and/or tracking
 /// features.
 /// \sa MallocAllocator
-class Allocator
+class PSD_API Allocator
 {
 public:
 	/// Empty destructor.

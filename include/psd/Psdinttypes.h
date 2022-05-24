@@ -3,7 +3,6 @@
 
 #pragma once
 
-
 #if PSD_USE_MSVC && PSD_USE_MSVC_VER <= 2012
 	// VS2008, VS2010 and VS2012 don't provide inttypes.h
 	#define PRIu64 "I64u"

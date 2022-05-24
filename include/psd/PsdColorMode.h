@@ -3,6 +3,7 @@
 
 #pragma once
 
+#include <psd/PsdPch.h>
 
 PSD_NAMESPACE_BEGIN
 
@@ -11,7 +12,7 @@ PSD_NAMESPACE_BEGIN
 /// \brief A namespace holding all color modes known by Photoshop.
 namespace colorMode
 {
-	enum Enum
+	enum PSD_API Enum
 	{
 		BITMAP = 0,
 		GRAYSCALE = 1,
@@ -24,7 +25,7 @@ namespace colorMode
 	};
 
 	/// Converts any of the \ref colorMode::Enum values into a string literal.
-	const char* ToString(unsigned int value);
+	PSD_API const char* ToString(unsigned int value);
 }
 
 PSD_NAMESPACE_END

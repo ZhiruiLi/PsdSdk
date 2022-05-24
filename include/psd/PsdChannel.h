@@ -3,6 +3,7 @@
 
 #pragma once
 
+#include <psd/PsdPch.h>
 
 PSD_NAMESPACE_BEGIN
 
@@ -10,7 +11,7 @@ PSD_NAMESPACE_BEGIN
 /// \class Channel
 /// \brief A struct representing a channel as stored in the layers of the Layer Mask section.
 /// \sa Layer
-struct Channel
+struct PSD_API Channel
 {
 	uint64_t fileOffset;				///< The offset from the start of the file where the channel's data is stored.
 	uint32_t size;						///< The size of the channel data to be read from the file.

@@ -3,17 +3,17 @@
 
 #pragma once
 
+#include <psd/PsdPch.h>
 
 PSD_NAMESPACE_BEGIN
 
 struct Layer;
 
-
 /// \ingroup Sections
 /// \class LayerMaskSection
 /// \brief A struct representing the information extracted from the Layer Mask section.
 /// \sa Layer
-struct LayerMaskSection
+struct PSD_API LayerMaskSection
 {
 	Layer* layers;						///< An array of layers, having layerCount entries.
 	unsigned int layerCount;			///< The number of layers stored in the array.

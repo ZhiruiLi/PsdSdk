@@ -3,8 +3,8 @@
 
 #pragma once
 
+#include <psd/PsdPch.h>
 #include <psd/PsdSection.h>
-
 
 PSD_NAMESPACE_BEGIN
 
@@ -12,7 +12,7 @@ PSD_NAMESPACE_BEGIN
 /// \class Document
 /// \brief A struct storing the document-wide information and sections contained in a .PSD file.
 /// \sa Section
-struct Document
+struct PSD_API Document
 {
 	unsigned int width;							///< The width of the document.
 	unsigned int height;						///< The height of the document.

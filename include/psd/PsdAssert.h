@@ -3,9 +3,9 @@
 
 #pragma once
 
+#include <psd/PsdPch.h>
 #include <cassert>
 #include <cstdio>
-
 
 /// \def PSD_ENABLE_ASSERTIONS 
 /// \ingroup Platform

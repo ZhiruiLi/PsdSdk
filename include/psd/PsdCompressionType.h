@@ -3,6 +3,7 @@
 
 #pragma once
 
+#include <psd/PsdPch.h>
 
 PSD_NAMESPACE_BEGIN
 
@@ -11,7 +12,7 @@ PSD_NAMESPACE_BEGIN
 /// \brief A namespace holding compression types known by Photoshop.
 namespace compressionType
 {
-	enum Enum
+	enum PSD_API Enum
 	{
 		RAW = 0,								///< Raw data.
 		RLE = 1,								///< RLE-compressed data (using the PackBits algorithm).

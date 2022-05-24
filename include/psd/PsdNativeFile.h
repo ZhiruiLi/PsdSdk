@@ -6,15 +6,13 @@
 #include <psd/PsdPch.h>
 #include <psd/PsdAllocator.h>
 #include <psd/PsdFile.h>
-#include <psd/PsdNamespace.h>
-
 
 PSD_NAMESPACE_BEGIN
 
 /// \ingroup Files
 /// \brief Simple file implementation that uses Windows' native file functions internally.
 /// \sa File
-class NativeFile : public File
+class PSD_API NativeFile : public File
 {
 public:
 	/// Constructor.

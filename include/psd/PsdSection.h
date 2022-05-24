@@ -3,13 +3,14 @@
 
 #pragma once
 
+#include <psd/PsdPch.h>
 
 PSD_NAMESPACE_BEGIN
 
 /// \ingroup Types
 /// \class Section
 /// \brief A struct storing data for any section in a .PSD file.
-struct Section
+struct PSD_API Section
 {
 	uint64_t offset;				///< The offset from the start of the file where this section is stored.
 	uint32_t length;				///< The length of the section.

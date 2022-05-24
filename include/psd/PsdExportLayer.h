@@ -3,13 +3,14 @@
 
 #pragma once
 
+#include <psd/PsdPch.h>
 
 PSD_NAMESPACE_BEGIN
 
 /// \ingroup Types
 /// \class ExportLayer
 /// \brief A struct representing a layer as exported to the Layer Mask section.
-struct ExportLayer
+struct PSD_API ExportLayer
 {
 	// the SDK currently supports R, G, B, A
 	static const unsigned int MAX_CHANNEL_COUNT = 4u;

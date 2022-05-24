@@ -3,8 +3,8 @@
 
 #pragma once
 
+#include <psd/PsdPch.h>
 #include <psd/PsdAssert.h>
-
 
 PSD_NAMESPACE_BEGIN
 
@@ -18,7 +18,7 @@ namespace util
 	/// often be used in situations where the maximum length of a string can be limited, such as when dealing with filenames,
 	/// in the logging system, when parsing files, etc. A FixedSizeString should be preferred to other implementations
 	/// in such cases.
-	class FixedSizeString
+	class PSD_API FixedSizeString
 	{
 	public:
 		/// A constant denoting the capacity of the string.

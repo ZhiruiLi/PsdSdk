@@ -3,18 +3,18 @@
 
 #pragma once
 
+#include <psd/PsdPch.h>
 
 PSD_NAMESPACE_BEGIN
 
 struct AlphaChannel;
 struct Thumbnail;
 
-
 /// \ingroup Sections
 /// \class ImageResourcesSection
 /// \brief A struct representing the information extracted from the Image Resources section.
 /// \sa AlphaChannel
-struct ImageResourcesSection
+struct PSD_API ImageResourcesSection
 {
 	AlphaChannel* alphaChannels;			///< An array of alpha channels, having alphaChannelCount entries.
 	unsigned int alphaChannelCount;			///< The number of alpha channels stored in the array.

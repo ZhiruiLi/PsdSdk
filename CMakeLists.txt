@@ -12,7 +12,9 @@ list(INSERT CMAKE_MODULE_PATH 0 ${CMAKE_SOURCE_DIR}/cmake)
 # ----------------------------------------------------------------
 
 include (GenerateExportHeader)
-set(CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS ON)
+if(WIN32)
+    set(CMAKE_SUPPORT_WINDOWS_EXPORT_ALL_SYMBOLS ON)
+endif(WIN32)
 
 add_library(psd
     src/PsdAllocator.cpp
@@ -50,7 +52,7 @@ add_library(psd
 GENERATE_EXPORT_HEADER (psd
     BASE_NAME psd
     EXPORT_MACRO_NAME PSD_API
-    EXPORT_FILE_NAME include/psd/psd_export.h
+    EXPORT_FILE_NAME include/psd/PsdApi.h
 )
 
 # add alias

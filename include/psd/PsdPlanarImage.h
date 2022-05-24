@@ -3,6 +3,7 @@
 
 #pragma once
 
+#include <psd/PsdPch.h>
 
 PSD_NAMESPACE_BEGIN
 
@@ -10,7 +11,7 @@ PSD_NAMESPACE_BEGIN
 /// \class PlanarImage
 /// \brief A struct representing a planar image as stored in the Image Data section.
 /// \sa ImageDataSection
-struct PlanarImage
+struct PSD_API PlanarImage
 {
 	void* data;					///< Planar data the size of the document's canvas.
 };

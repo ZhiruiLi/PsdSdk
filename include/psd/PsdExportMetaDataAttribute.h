@@ -3,13 +3,14 @@
 
 #pragma once
 
+#include <psd/PsdPch.h>
 
 PSD_NAMESPACE_BEGIN
 
 /// \ingroup Types
 /// \class ExportMetaDataAttribute
 /// \brief A struct representing a meta data attribute as exported to the image resources section.
-struct ExportMetaDataAttribute
+struct PSD_API ExportMetaDataAttribute
 {
 	char* name;
 	char* value;

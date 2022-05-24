@@ -3,6 +3,7 @@
 
 #pragma once
 
+#include <psd/PsdPch.h>
 
 PSD_NAMESPACE_BEGIN
 
@@ -11,7 +12,7 @@ PSD_NAMESPACE_BEGIN
 /// \brief A namespace holding constants to distinguish between the types of data a channel can hold.
 namespace channelType
 {
-	enum Enum
+	enum PSD_API Enum
 	{
 		INVALID = 32767,					///< Internal value. Used to denote that a channel no longer holds valid data.
 

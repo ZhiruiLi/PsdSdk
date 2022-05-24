@@ -3,7 +3,6 @@
 #include <psd/PsdLog.h>
 #include <psd/PsdFile.h>
 #include <psd/PsdAllocator.h>
-#include <psd/PsdNamespace.h>
 #include <psd/PsdStringUtil.h>
 #include <psd/PsdNativeFile.h>
 

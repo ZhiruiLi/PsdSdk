@@ -3,8 +3,8 @@
 
 #pragma once
 
+#include <psd/PsdPch.h>
 #include <psd/PsdFixedSizeString.h>
-
 
 PSD_NAMESPACE_BEGIN
 
@@ -13,7 +13,7 @@ PSD_NAMESPACE_BEGIN
 /// \brief A struct representing an alpha channel as stored in the image resources section.
 /// \remark Note that the image data for alpha channels is stored in the image data section.
 /// \sa ImageResourcesSection
-struct AlphaChannel
+struct PSD_API AlphaChannel
 {
 	struct Mode
 	{

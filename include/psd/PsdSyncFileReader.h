@@ -3,11 +3,11 @@
 
 #pragma once
 
+#include <psd/PsdPch.h>
 
 PSD_NAMESPACE_BEGIN
 
 class File;
-
 
 /// \ingroup Files
 /// \brief Synchronous file wrapper using an arbitrary \ref File implementation for sequential reads.
@@ -15,7 +15,7 @@ class File;
 /// of asynchronous reads, keeping track of individual read operations. This is especially true when parsing a file sequentially,
 /// where different read operations depend on previous ones.
 /// \sa File
-class SyncFileReader
+class PSD_API SyncFileReader
 {
 public:
 	/// Constructor initializing the internal read position to zero.

@@ -3,6 +3,7 @@
 
 #pragma once
 
+#include <psd/PsdPch.h>
 
 PSD_NAMESPACE_BEGIN
 
@@ -12,7 +13,7 @@ PSD_NAMESPACE_BEGIN
 /// \details The type of image resource is indicated by a 4-byte integer stored in the Image Resources section.
 namespace imageResource
 {
-	enum Enum
+	enum PSD_API Enum
 	{
 		IPTC_NAA = 1028,
 		CAPTION_DIGEST = 1061,

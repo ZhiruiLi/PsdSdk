@@ -3,18 +3,18 @@
 
 #pragma once
 
+#include <psd/PsdPch.h>
 
 PSD_NAMESPACE_BEGIN
 
 class File;
-
 
 /// \ingroup Files
 /// \brief Synchronous file wrapper using an arbitrary \ref File implementation for sequential writes.
 /// \details In certain situations, working with synchronous write operations is much easier than having to deal with a number
 /// of asynchronous writes, keeping track of individual write operations. This is especially true when e.g. writing header information.
 /// \sa File
-class SyncFileWriter
+class PSD_API SyncFileWriter
 {
 public:
 	/// Constructor initializing the internal write position to zero.

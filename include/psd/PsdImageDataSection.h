@@ -3,17 +3,17 @@
 
 #pragma once
 
+#include <psd/PsdPch.h>
 
 PSD_NAMESPACE_BEGIN
 
 struct PlanarImage;
 
-
 /// \ingroup Sections
 /// \class ImageDataSection
 /// \brief A struct representing the information extracted from the Image Data section.
 /// \sa PlanarImage
-struct ImageDataSection
+struct PSD_API ImageDataSection
 {
 	PlanarImage* images;					///< An array of planar images, having imageCount entries.
 	unsigned int imageCount;				///< The number of planar images stored in the array.

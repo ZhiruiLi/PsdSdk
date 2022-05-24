@@ -3,6 +3,7 @@
 
 #pragma once
 
+#include <psd/PsdPch.h>
 
 PSD_NAMESPACE_BEGIN
 
@@ -11,7 +12,7 @@ PSD_NAMESPACE_BEGIN
 /// \brief A namespace holding all blend modes known by Photoshop.
 namespace blendMode
 {
-	enum Enum
+	enum PSD_API Enum
 	{
 		PASS_THROUGH,					///< Key = "pass"
 		NORMAL,							///< Key = "norm"
@@ -46,10 +47,10 @@ namespace blendMode
 	};
 
 	/// Converts a given \a key to the corresponding \ref blendMode::Enum.
-	Enum KeyToEnum(uint32_t key);
+	PSD_API Enum KeyToEnum(uint32_t key);
 
 	/// Converts any of the \ref blendMode::Enum values into a string literal.
-	const char* ToString(Enum value);
+	PSD_API const char* ToString(Enum value);
 }
 
 PSD_NAMESPACE_END

@@ -3,6 +3,7 @@
 
 #pragma once
 
+#include <psd/PsdPch.h>
 
 PSD_NAMESPACE_BEGIN
 
@@ -25,7 +26,7 @@ namespace util
 	/// \remark Note that util::Key::VALUE is a compile-time constant, and can therefore be used in other template expressions,
 	/// switch cases, etc.
 	template <char a, char b, char c, char d>
-	struct Key
+	struct PSD_API Key
 	{
 		static const uint32_t VALUE =
 			((static_cast<uint32_t>(a) << 24u) |

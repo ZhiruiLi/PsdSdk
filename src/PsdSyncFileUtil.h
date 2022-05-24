@@ -3,9 +3,9 @@
 
 #pragma once
 
+#include <psd/PsdPch.h>
 #include <psd/PsdSyncFileReader.h>
 #include <psd/PsdSyncFileWriter.h>
-#include <psd/PsdNamespace.h>
 
 #include "PsdEndianConversion.h"
 

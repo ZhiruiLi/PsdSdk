@@ -3,6 +3,7 @@
 
 #pragma once
 
+#include <psd/PsdPch.h>
 
 PSD_NAMESPACE_BEGIN
 
@@ -12,7 +13,7 @@ PSD_NAMESPACE_BEGIN
 /// \sa colorMode
 namespace exportColorMode
 {
-	enum Enum
+	enum PSD_API Enum
 	{
 		GRAYSCALE = 1,
 		RGB = 3

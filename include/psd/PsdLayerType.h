@@ -3,6 +3,7 @@
 
 #pragma once
 
+#include <psd/PsdPch.h>
 
 PSD_NAMESPACE_BEGIN
 
@@ -11,7 +12,7 @@ PSD_NAMESPACE_BEGIN
 /// \brief A namespace holding layer types known by Photoshop.
 namespace layerType
 {
-	enum Enum
+	enum PSD_API Enum
 	{
 		ANY = 0,								///< Any other type of layer.
 		OPEN_FOLDER = 1,						///< Open folder.
