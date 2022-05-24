@@ -737,79 +737,79 @@ int SampleWritePsd(void)
 		DestroyExportDocument(document, &allocator);
 		file.Close();
 	}
-	// {
-	// 	const std::wstring dstPath = GetSampleOutputPath() + L"SampleWrite_16.psd";
+	{
+		const std::wstring dstPath = GetSampleOutputPath() + L"SampleWrite_16.psd";
 
-	// 	MallocAllocator allocator;
-	// 	NativeFile file(&allocator);
+		MallocAllocator allocator;
+		NativeFile file(&allocator);
 
-	// 	// try opening the file. if it fails, bail out.
-	// 	if (!file.OpenWrite(dstPath.c_str()))
-	// 	{
-	// 		OutputDebugStringA("Cannot open file.\n");
-	// 		return 1;
-	// 	}
+		// try opening the file. if it fails, bail out.
+		if (!file.OpenWrite(dstPath.c_str()))
+		{
+			printf("Cannot open file.\n");
+			return 1;
+		}
 
-	// 	// write a Grayscale PSD file, 16-bit.
-	// 	// Grayscale works similar to RGB, only the types of export channels change.
-	// 	ExportDocument* document = CreateExportDocument(&allocator, IMAGE_WIDTH, IMAGE_HEIGHT, 16u, exportColorMode::GRAYSCALE);
-	// 	{
-	// 		const unsigned int layer1 = AddLayer(document, &allocator, "MUL pattern");
-	// 		UpdateLayer(document, &allocator, layer1, exportChannel::GRAY, 0, 0, IMAGE_WIDTH, IMAGE_HEIGHT, &g_multiplyData16[0][0], compressionType::RAW);
+		// write a Grayscale PSD file, 16-bit.
+		// Grayscale works similar to RGB, only the types of export channels change.
+		ExportDocument* document = CreateExportDocument(&allocator, IMAGE_WIDTH, IMAGE_HEIGHT, 16u, exportColorMode::GRAYSCALE);
+		{
+			const unsigned int layer1 = AddLayer(document, &allocator, "MUL pattern");
+			UpdateLayer(document, &allocator, layer1, exportChannel::GRAY, 0, 0, IMAGE_WIDTH, IMAGE_HEIGHT, &g_multiplyData16[0][0], compressionType::RAW);
 
-	// 		const unsigned int layer2 = AddLayer(document, &allocator, "XOR pattern");
-	// 		UpdateLayer(document, &allocator, layer2, exportChannel::GRAY, 0, 0, IMAGE_WIDTH, IMAGE_HEIGHT, &g_xorData16[0][0], compressionType::RLE);
+			const unsigned int layer2 = AddLayer(document, &allocator, "XOR pattern");
+			UpdateLayer(document, &allocator, layer2, exportChannel::GRAY, 0, 0, IMAGE_WIDTH, IMAGE_HEIGHT, &g_xorData16[0][0], compressionType::RLE);
 
-	// 		const unsigned int layer3 = AddLayer(document, &allocator, "AND pattern");
-	// 		UpdateLayer(document, &allocator, layer3, exportChannel::GRAY, 0, 0, IMAGE_WIDTH, IMAGE_HEIGHT, &g_andData16[0][0], compressionType::ZIP);
+			const unsigned int layer3 = AddLayer(document, &allocator, "AND pattern");
+			UpdateLayer(document, &allocator, layer3, exportChannel::GRAY, 0, 0, IMAGE_WIDTH, IMAGE_HEIGHT, &g_andData16[0][0], compressionType::ZIP);
 
-	// 		const unsigned int layer4 = AddLayer(document, &allocator, "OR pattern with transparency");
-	// 		UpdateLayer(document, &allocator, layer4, exportChannel::GRAY, 0, 0, IMAGE_WIDTH, IMAGE_HEIGHT, &g_orData16[0][0], compressionType::ZIP_WITH_PREDICTION);
-	// 		UpdateLayer(document, &allocator, layer4, exportChannel::ALPHA, 0, 0, IMAGE_WIDTH, IMAGE_HEIGHT, &g_checkerBoardData16[0][0], compressionType::ZIP_WITH_PREDICTION);
+			const unsigned int layer4 = AddLayer(document, &allocator, "OR pattern with transparency");
+			UpdateLayer(document, &allocator, layer4, exportChannel::GRAY, 0, 0, IMAGE_WIDTH, IMAGE_HEIGHT, &g_orData16[0][0], compressionType::ZIP_WITH_PREDICTION);
+			UpdateLayer(document, &allocator, layer4, exportChannel::ALPHA, 0, 0, IMAGE_WIDTH, IMAGE_HEIGHT, &g_checkerBoardData16[0][0], compressionType::ZIP_WITH_PREDICTION);
 
-	// 		UpdateMergedImage(document, &allocator, &g_multiplyData16[0][0], &g_xorData16[0][0], &g_andData16[0][0]);
+			UpdateMergedImage(document, &allocator, &g_multiplyData16[0][0], &g_xorData16[0][0], &g_andData16[0][0]);
 
-	// 		WriteDocument(document, &allocator, &file);
-	// 	}
+			WriteDocument(document, &allocator, &file);
+		}
 
-	// 	DestroyExportDocument(document, &allocator);
-	// 	file.Close();
-	// }
-	// {
-	// 	const std::wstring dstPath = GetSampleOutputPath() + L"SampleWrite_32.psd";
+		DestroyExportDocument(document, &allocator);
+		file.Close();
+	}
+	{
+		const std::wstring dstPath = GetSampleOutputPath() + L"SampleWrite_32.psd";
 
-	// 	MallocAllocator allocator;
-	// 	NativeFile file(&allocator);
+		MallocAllocator allocator;
+		NativeFile file(&allocator);
 
-	// 	// try opening the file. if it fails, bail out.
-	// 	if (!file.OpenWrite(dstPath.c_str()))
-	// 	{
-	// 		OutputDebugStringA("Cannot open file.\n");
-	// 		return 1;
-	// 	}
+		// try opening the file. if it fails, bail out.
+		if (!file.OpenWrite(dstPath.c_str()))
+		{
+			printf("Cannot open file.\n");
+			return 1;
+		}
 
-	// 	// write an RGB PSD file, 32-bit
-	// 	ExportDocument* document = CreateExportDocument(&allocator, IMAGE_WIDTH, IMAGE_HEIGHT, 32u, exportColorMode::RGB);
-	// 	{
-	// 		const unsigned int layer1 = AddLayer(document, &allocator, "MUL pattern");
-	// 		UpdateLayer(document, &allocator, layer1, exportChannel::RED, 0, 0, IMAGE_WIDTH, IMAGE_HEIGHT, &g_multiplyData32[0][0], compressionType::RAW);
-	// 		UpdateLayer(document, &allocator, layer1, exportChannel::GREEN, 0, 0, IMAGE_WIDTH, IMAGE_HEIGHT, &g_multiplyData32[0][0], compressionType::RLE);
-	// 		UpdateLayer(document, &allocator, layer1, exportChannel::BLUE, 0, 0, IMAGE_WIDTH, IMAGE_HEIGHT, &g_multiplyData32[0][0], compressionType::ZIP);
+		// write an RGB PSD file, 32-bit
+		ExportDocument* document = CreateExportDocument(&allocator, IMAGE_WIDTH, IMAGE_HEIGHT, 32u, exportColorMode::RGB);
+		{
+			const unsigned int layer1 = AddLayer(document, &allocator, "MUL pattern");
+			UpdateLayer(document, &allocator, layer1, exportChannel::RED, 0, 0, IMAGE_WIDTH, IMAGE_HEIGHT, &g_multiplyData32[0][0], compressionType::RAW);
+			UpdateLayer(document, &allocator, layer1, exportChannel::GREEN, 0, 0, IMAGE_WIDTH, IMAGE_HEIGHT, &g_multiplyData32[0][0], compressionType::RLE);
+			UpdateLayer(document, &allocator, layer1, exportChannel::BLUE, 0, 0, IMAGE_WIDTH, IMAGE_HEIGHT, &g_multiplyData32[0][0], compressionType::ZIP);
 
-	// 		const unsigned int layer2 = AddLayer(document, &allocator, "Mixed pattern with transparency");
-	// 		UpdateLayer(document, &allocator, layer2, exportChannel::RED, 0, 0, IMAGE_WIDTH, IMAGE_HEIGHT, &g_multiplyData32[0][0], compressionType::RLE);
-	// 		UpdateLayer(document, &allocator, layer2, exportChannel::GREEN, 0, 0, IMAGE_WIDTH, IMAGE_HEIGHT, &g_xorData32[0][0], compressionType::ZIP);
-	// 		UpdateLayer(document, &allocator, layer2, exportChannel::BLUE, 0, 0, IMAGE_WIDTH, IMAGE_HEIGHT, &g_orData32[0][0], compressionType::ZIP_WITH_PREDICTION);
-	// 		UpdateLayer(document, &allocator, layer2, exportChannel::ALPHA, 0, 0, IMAGE_WIDTH, IMAGE_HEIGHT, &g_checkerBoardData32[0][0], compressionType::RAW);
+			const unsigned int layer2 = AddLayer(document, &allocator, "Mixed pattern with transparency");
+			UpdateLayer(document, &allocator, layer2, exportChannel::RED, 0, 0, IMAGE_WIDTH, IMAGE_HEIGHT, &g_multiplyData32[0][0], compressionType::RLE);
+			UpdateLayer(document, &allocator, layer2, exportChannel::GREEN, 0, 0, IMAGE_WIDTH, IMAGE_HEIGHT, &g_xorData32[0][0], compressionType::ZIP);
+			UpdateLayer(document, &allocator, layer2, exportChannel::BLUE, 0, 0, IMAGE_WIDTH, IMAGE_HEIGHT, &g_orData32[0][0], compressionType::ZIP_WITH_PREDICTION);
+			UpdateLayer(document, &allocator, layer2, exportChannel::ALPHA, 0, 0, IMAGE_WIDTH, IMAGE_HEIGHT, &g_checkerBoardData32[0][0], compressionType::RAW);
 
-	// 		UpdateMergedImage(document, &allocator, &g_multiplyData32[0][0], &g_xorData32[0][0], &g_checkerBoardData32[0][0]);
+			UpdateMergedImage(document, &allocator, &g_multiplyData32[0][0], &g_xorData32[0][0], &g_checkerBoardData32[0][0]);
 
-	// 		WriteDocument(document, &allocator, &file);
-	// 	}
+			WriteDocument(document, &allocator, &file);
+		}
 
-	// 	DestroyExportDocument(document, &allocator);
-	// 	file.Close();
-	// }
+		DestroyExportDocument(document, &allocator);
+		file.Close();
+	}
 
 	return 0;
 }
