@@ -17,10 +17,10 @@
 #include <psd/PsdPch.h>
 #include <psd/PsdNativeFile.h>
 #include <psd/PsdAllocator.h>
-#include <psd/PsdPlatform.h>
 #include <psd/PsdLog.h>
 #include <psd/Psdinttypes.h>
 
+#include "PsdPlatform.h"
 #include "PsdMemoryUtil.h"
 
 

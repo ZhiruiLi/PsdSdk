@@ -2,7 +2,6 @@
 // See LICENSE.txt for licensing details (2-clause BSD License: https://opensource.org/licenses/BSD-2-Clause)
 
 #include <psd/Psd.h>
-#include <psd/PsdPlatform.h>
 
 #include "PsdTgaExporter.h"
 #include "PsdDebug.h"
@@ -102,7 +101,7 @@ namespace tgaExporter
 		if (file == NULL)
 #endif
 		{
-			OutputDebugStringA("Cannot create file for writing.");
+			printf("Cannot create file for writing.\n");
 			return nullptr;
 		}
 

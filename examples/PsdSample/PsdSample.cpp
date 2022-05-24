@@ -4,10 +4,6 @@
 // the main include that always needs to be included in every translation unit that uses the PSD library
 #include <psd/Psd.h>
 
-// for convenience reasons, we directly include the platform header from the PSD library.
-// we could have just included <Windows.h> as well, but that is unnecessarily big, and triggers lots of warnings.
-#include <psd/PsdPlatform.h>
-
 // in the sample, we use the provided malloc allocator for all memory allocations. likewise, we also use the provided
 // native file interface.
 // in your code, feel free to use whatever allocator you have lying around.
@@ -243,7 +239,7 @@ int SampleReadPsd(void)
 	// try opening the file. if it fails, bail out.
 	if (!file.OpenRead(srcPath.c_str()))
 	{
-		OutputDebugStringA("Cannot open file.\n");
+		printf("Cannot open file.\n");
 		return 1;
 	}
 
@@ -252,7 +248,7 @@ int SampleReadPsd(void)
 	Document* document = CreateDocument(&file, &allocator);
 	if (!document)
 	{
-		OutputDebugStringA("Cannot create document.\n");
+		printf("Cannot create document.\n");
 		file.Close();
 		return 1;
 	}
@@ -260,7 +256,7 @@ int SampleReadPsd(void)
 	// the sample only supports RGB colormode
 	if (document->colorMode != colorMode::RGB)
 	{
-		OutputDebugStringA("Document is not in RGB color mode.\n");
+		printf("Document is not in RGB color mode.\n");
 		DestroyDocument(document, &allocator);
 		file.Close();
 		return 1;
@@ -270,9 +266,9 @@ int SampleReadPsd(void)
 	// this gives access to the ICC profile, EXIF data and XMP metadata.
 	{
 		ImageResourcesSection* imageResourcesSection = ParseImageResourcesSection(document, &file, &allocator);
-		OutputDebugStringA("XMP metadata:\n");
-		OutputDebugStringA(imageResourcesSection->xmpMetadata);
-		OutputDebugStringA("\n");
+		printf("XMP metadata:\n");
+		printf(imageResourcesSection->xmpMetadata);
+		printf("\n");
 		DestroyImageResourcesSection(imageResourcesSection, &allocator);
 	}
 
@@ -670,7 +666,7 @@ int SampleWritePsd(void)
 		// try opening the file. if it fails, bail out.
 		if (!file.OpenWrite(dstPath.c_str()))
 		{
-			OutputDebugStringA("Cannot open file.\n");
+			printf("Cannot open file.\n");
 			return 1;
 		}
 
