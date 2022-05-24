@@ -4,7 +4,6 @@
 #include <psd/Psd.h>
 
 #include "PsdTgaExporter.h"
-#include "PsdDebug.h"
 
 #include <cstdio>
 

@@ -31,7 +31,6 @@
 #include <psd/PsdExportDocument.h>
 
 #include "PsdTgaExporter.h"
-#include "PsdDebug.h"
 
 PSD_PUSH_WARNING_LEVEL(0)
 	// disable annoying warning caused by xlocale(337): warning C4530: C++ exception handler used, but unwind semantics are not enabled. Specify /EHsc
